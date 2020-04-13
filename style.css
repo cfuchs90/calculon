@@ -1,0 +1,47 @@
+.container {
+  background: #5c5454;
+  width: 270px;
+  padding: 1em;
+  /* border: 1px solid #5c5454; */
+  border-radius: 15px;
+}
+
+
+.mainBlock {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 200px;
+}
+
+.buttonBlock {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.calcDisplay p{
+  width: 230px;
+  height: .7em;
+  background: #85b56d;
+  padding: .7em;
+  overflow: hidden;
+}
+
+.allButtons {
+  margin: 0.5em;
+  /* box-shadow: 5px 2px black; */
+}
+
+.operations {
+  display: flex;
+  flex-direction: column;
+  float: right;
+}
+
+
+.operations > * {
+  width: 50px;
+  text-align: center;
+  
+}
