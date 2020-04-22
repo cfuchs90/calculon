@@ -43,6 +43,9 @@ function evalExpr(evalArr) {
   // for an operator symbol (+, -, *, /) in the evalArr and applies
   // the operation to the numbers in the array.
 
+
+  /* TODO: Punkt vor Strich! */
+
   let foundObject = evalArr.join("").match(/[-+*/]/);
   let foundOperatorSymbol = foundObject[0];
 
