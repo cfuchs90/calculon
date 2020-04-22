@@ -43,36 +43,37 @@ function evalExpr(evalArr) {
   // for an operator symbol (+, -, *, /) in the evalArr and applies
   // the operation to the numbers in the array.
 
-
-  // TODO zweistellige Zahlen fixen
-  let numberArray = [];
   let foundObject = evalArr.join("").match(/[-+*/]/);
   let foundOperatorSymbol = foundObject[0];
 
-  for(let elem of evalArr) {
-    if(!isNaN(elem)) {
-      numberArray.push(Number(elem));
-    }
-  }
+  let numberArray = splitEquation(evalArr, foundOperatorSymbol).map(Number);
 
   switch (foundOperatorSymbol){
   case "+":
-    console.log("Plus Symbol");
     return numberArray.reduce((current, next) => current + next);
     break;
   case "-":
-    console.log("Minus Symbol");
     return numberArray.reduce((current, next) => current - next);
     break;
   case "*":
-    console.log("Multiplication Symbol");
     return numberArray.reduce((current, next) => current * next);
     break;
   case "/":
-    console.log("Division Symbol");
     return numberArray.reduce((current, next) => current / next);
     break;
   default:
     return "ERROR";
   }
 }
+
+
+function splitEquation(equation, operator) {
+  let operatorIndex = equation.indexOf(operator);
+  let firstPart = equation.slice(0, operatorIndex).map(x => x.toString())
+      .reduce((a,b) => a +b);
+  let secondPart = equation.slice(operatorIndex + 1, ).map(x => x.toString())
+      .reduce((a,b) => a +b);
+
+  return [firstPart, secondPart];
+}
+  

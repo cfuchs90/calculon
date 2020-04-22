@@ -1,9 +1,15 @@
+.maintitle{
+  text-align: center;
+  margin-bottom: 2em;
+}
+
 .container {
   background: #5c5454;
   width: 270px;
   padding: 1em;
   /* border: 1px solid #5c5454; */
   border-radius: 15px;
+  margin: 0 auto;
 }
 
 
@@ -30,6 +36,7 @@
 
 .allButtons {
   margin: 0.5em;
+  padding: 5px 20px;
   /* box-shadow: 5px 2px black; */
 }
 
