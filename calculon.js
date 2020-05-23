@@ -80,3 +80,9 @@ function splitEquation(equation, operator) {
   return [firstPart, secondPart];
 }
   
+/* operate Funktion erstellen, größere Gleichung in kleinere Gleichungen aufsplitten, 
+ * die Gleichungen in ein Array packen und per .map Methode die operate Funktion auf sie
+ * anwenden. 
+ * IDEE: per for loop durch das array mit den Gleichungen loopen und die operate Funktion auf
+ * alle Elemente anwenden die ungleich "+" oder "-" sind, so kann ich anschließend die operate funktion
+ * auf diese eine große Gleichung in dem Array anwenden.
